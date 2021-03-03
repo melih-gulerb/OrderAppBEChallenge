@@ -34,7 +34,7 @@ namespace OrderAPI.Controllers
         //GET: api/order/customerId/id
         [HttpGet]
         [Route("customer/{id}")]
-        public IEnumerable<Order> GetOrderbyCustomer(int id)//Invoke orders from customer by giving its Id
+        public IEnumerable<Order> GetOrderbyCustomer(string id)//Invoke orders from customer by giving its Id
         {
             //Make a list that created order where all have same customerId's 
             var list = _context.Orders.Where(o => o.CustomerId == id).AsNoTracking();
