@@ -1,0 +1,172 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/customer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/get-all-customers/",
+      "UpstreamHttpMethod":  ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Key",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/customer/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port":8000
+        }
+      ],
+      "UpstreamPathTemplate": "/get-customer/{id}",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customer/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        { "Host": "localhost",
+        "Port": 8000
+      }
+        ],
+      "UpstreamPathTemplate": "/post-customer/",
+      "UpstreamHttpMethod": ["POST"]
+      
+    },
+    {
+      "DownstreamPathTemplate": "/api/customer/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        { "Host": "localhost",
+          "Port": 8000
+        }],
+      "UpstreamPathTemplate": "/put-customer/{id}",
+      "UpstreamHttpMethod": ["PUT"]
+      
+    },
+    {
+      "DownstreamPathTemplate": "/api/customer/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        { "Host": "localhost",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/delete-customer/{id}",
+      "UpstreamHttpMethod": ["DELETE"]
+      
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+      "DownstreamPathTemplate": "/api/order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7000
+        }
+      ],
+      "UpstreamPathTemplate": "/get-all-orders",
+      "UpstreamHttpMethod":  ["GET"]
+      
+    },
+    {
+      "DownstreamPathTemplate": "/api/order/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7000
+        }
+      ],
+      "UpstreamPathTemplate": "/get-an-order/{id}",
+      "UpstreamHttpMethod":  ["GET"]
+      
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/order/customer/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7000
+        }
+      ],
+      "UpstreamPathTemplate": "/get-orders-of-customer/customer/{id}",
+      "UpstreamHttpMethod":  ["GET"]
+      
+    },
+    {
+      "DownstreamPathTemplate": "/api/order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7000
+        }
+      ],
+      "UpstreamPathTemplate": "/post-order/",
+      "UpstreamHttpMethod":  ["POST"]
+      
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/order/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7000
+        }
+      ],
+      "UpstreamPathTemplate": "/put-order/{id}",
+      "UpstreamHttpMethod":  ["PUT"]
+      
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/order/change/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7000
+        }
+      ],
+      "UpstreamPathTemplate": "/change-order-status/{id}",
+      "UpstreamHttpMethod":  ["PUT"]
+      
+    },
+
+
+    {"DownstreamPathTemplate": "/api/order/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7000
+        }
+      ],
+      "UpstreamPathTemplate": "/delete-order/{id}",
+      "UpstreamHttpMethod":  ["DELETE"]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:9000"
+  }
+}
